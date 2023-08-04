@@ -1,0 +1,36 @@
+{
+  "name": "kanbanzen-server",
+  "version": "1.0.0",
+  "description": "[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-718a45dd9cf7e7f842a935f5ebbe5719a5e09af4491e668f4dbf3b35d5cca122.svg)](https://classroom.github.com/online_ide?assignment_repo_id=11510366&assignment_repo_type=AssignmentRepo)\r # fsjs-p2-v1-iproject-server\r Individual Project - Server",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/H8-P2-S1/fsjs-p2-v1-iproject-server-Alif-Dzarif.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/H8-P2-S1/fsjs-p2-v1-iproject-server-Alif-Dzarif/issues"
+  },
+  "homepage": "https://github.com/H8-P2-S1/fsjs-p2-v1-iproject-server-Alif-Dzarif#readme",
+  "devDependencies": {
+    "dotenv": "^16.3.1",
+    "nodemon": "^3.0.1",
+    "sequelize-cli": "^6.6.1"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "bcrypt": "^5.1.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.1",
+    "midtrans-client": "^1.3.1",
+    "pg": "^8.11.2",
+    "randomstring": "^1.3.0",
+    "sequelize": "^6.32.1"
+  }
+}
