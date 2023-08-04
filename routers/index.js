@@ -1,0 +1,23 @@
+const router = require('express').Router()
+const userRoutes = require('./userRouter')
+const projectRoutes = require('./projectRouter')
+const taskRoutes = require('./taskRouter')
+const quoteRoutes = require('./quoteRoutes')
+const articleRoutes = require('./ArticleRoutes')
+const paymentRoutes = require('./paymentRoutes')
+const premiumAccess = require('./premiumAccess')
+const Authentication = require('../middlewares/authentication')
+const ProjectAuth = require('../middlewares/projectAuth')
+
+router.get('/', (req, res) => { res.send('KanbanZen Server said "Hello World!"') })
+router.use('/', userRoutes)
+router.use(Authentication)
+router.use('/', projectRoutes)
+router.use('/', quoteRoutes)
+router.use('/', articleRoutes)
+router.use('/', paymentRoutes)
+router.use('/', premiumAccess)
+router.use(ProjectAuth)
+router.use('/', taskRoutes)
+
+module.exports = router
