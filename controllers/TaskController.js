@@ -13,18 +13,16 @@ class TaskController {
 
   static async add(req, res, next) {
     try {
-      const { title, description, target, deadline } = req.body
+      const { title, description, target } = req.body
 
       if(!title) throw { name: 'TITLE_NULL' }
       if(!description) throw { name: 'DESC_NULL' }
       if(!target) throw { name: 'TARGET_NULL' }
-      if(!deadline) throw { name: 'DEADLINE_NULL' }
 
       const data = await Task.create({ 
         title, 
         description, 
         target, 
-        deadline,
         status: 'todo',
         ProjectId: req.projectData.id 
       })
