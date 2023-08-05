@@ -18,7 +18,6 @@ module.exports = (sequelize, DataTypes) => {
     title: DataTypes.STRING,
     description: DataTypes.STRING,
     target: DataTypes.STRING,
-    deadline: DataTypes.DATE,
     status: DataTypes.STRING
   }, {
     sequelize,

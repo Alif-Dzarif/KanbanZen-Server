@@ -8,7 +8,7 @@ class ProjectController {
     try {
       const data = await UserProject.findAll({ where: { UserId: req.userData.id } })
 
-      if(data.length > 4 && req.userData.premium === false) throw { name: 'LIMIT_CREATE' }
+      if(data.length >= 4 && req.userData.premium === false) throw { name: 'LIMIT_CREATE' }
       else {
         const { name, password } = req.body
         const code =  generateCode()
