@@ -66,7 +66,7 @@ class TaskController {
       if(!data) throw { name: 'PROJECT_NOT_FOUND' }
       else {
         if(data.ProjectId === req.projectData.id) {
-          title = task.title
+          title = data.title
           const task = await Task.update({ status: status }, { where: { id: id } })
           res.status(200).json({ message: `Update task '${title}' into ${status}` })
         } else {

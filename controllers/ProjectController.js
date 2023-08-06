@@ -115,6 +115,25 @@ class ProjectController {
       next(err)
     }
   }
+
+  static async info(req, res, next) {
+    try {
+      
+      const id = req.projectData.id
+  
+      const data = await Project.findByPk(id)
+
+      const result = {
+        id: data.id,
+        name: data.name,
+        code: data.code
+      }
+
+      res.status(200).json(result)
+    } catch (err) {
+      next(err)
+    }
+  }
 }
 
 module.exports = ProjectController
